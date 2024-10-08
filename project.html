@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <div class="header">
+      <a href="#default" class="logo">Portfolio</a>
+  
+      <div class="header-right">
+  
+        <a class="active" href="introduction.html#about">Home</a>
+        <a href="about.html">About</a>
+        <a href="skill.html#skill">Skill</a>
+        <a href="project.html">Project</a>
+        <a href="login.html">Login </a>
+  
+      </div>
+      
+    </div> 
+
+  <!-- Carousel Section -->
+  <div class="carousel-container">
+      <div class="carousel-images" id="carousel-images">
+        <img src="image/images (4).jpg" alt="Project 1">
+          <img src="image/images (2).jpg" alt="Project 2">
+          <img src="image/images (3).jpg" alt="Project 3">
+          <img src="image/images (4).jpg" alt="Project 4">
+          <img src="image/images (3).jpg" alt="Project 5">
+      </div>
+      <span class="carousel-button left" id="prevBtn"><i class="fa fa-chevron-left"></i></span>
+      <span class="carousel-button right" id="nextBtn"><i class="fa fa-chevron-right"></i></span>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="form-container">
+      <div class="form-box">
+          <h1>Contact Me</h1>
+          <form>
+              <div class="input-group">
+                  <input type="text" id="name" required>
+                  <label for="name"><i class="fa fa-user" style="color: #00e6e6;"></i> Your Name</label>
+              </div>
+              <div class="input-group">
+                  <input type="tel" id="phone" required>
+                  <label for="phone"><i class="fa fa-phone" style="color: #00e6e6;"></i> Phone No.</label>
+              </div>
+              <div class="input-group">
+                  <input type="email" id="email" required>
+                  <label for="email"><i class="fa fa-envelope" style="color: #00e6e6;"></i> Email ID</label>
+              </div>
+              <div class="input-group">
+                  <textarea id="message" rows="5" required></textarea>
+                  <label for="message"><i class="fa fa-comments" style="color: #00e6e6;"></i> Your Message</label>
+              </div>
+              <button type="submit">Submit</button>
+          </form>
+      </div>
+  </div>
+
+  <script>
+      const carouselImages = document.getElementById('carousel-images');
+      const images = carouselImages.getElementsByTagName('img');
+      const totalImages = images.length;
+      let index = 0;
+
+      document.getElementById('nextBtn').addEventListener('click', function() {
+          index = (index + 1) % totalImages;
+          updateCarousel();
+      });
+
+      document.getElementById('prevBtn').addEventListener('click', function() {
+          index = (index - 1 + totalImages) % totalImages;
+          updateCarousel();
+      });
+
+      function updateCarousel() {
+          const offset = -index * 100;
+          carouselImages.style.transform = `translateX(${offset}%)`;
+      }
+  </script>
+
+</body>
+</html>

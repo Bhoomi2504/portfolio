@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  background-color: #0c0c0c;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #0c0c0c;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: rgb(247, 248, 243);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgba(252, 253, 248, 0.938);
+}
+
+.header a:hover {
+  background-color: #dddddd00;
+  color: rgb(247, 243, 243);
+  box-sizing: content-box;
+  border: hidden;
+  border-bottom: 3px solid rgb(12, 226, 208);
+}
+
+.header a.active {
+  background-color: rgba(30, 143, 255, 0);
+  color: rgb(7, 238, 226);
+}
+
+.header a.active:hover {
+  background-color: #dddddd00;
+  color: rgb(241, 236, 236);
+  box-sizing: content-box;
+  border: hidden;
+  border-bottom: 3px solid rgb(12, 226, 208);
+}
+
+.header-right {
+  float: right;
+}
+
+.heading {
+  padding-left: 40px;
+  color: aliceblue;
+  padding-top: 70px;
+  column-count: 2;
+  column-gap: 40px;
+  margin-top: 0px;
+}
+
+.topic {
+  color: aqua;
+}
+
+.picture {
+  margin-right: 80px;
+  float: right;
+  border: 5px solid rgb(254, 255, 255);
+  border-radius: 10%;
+  box-shadow: 0px 0px 10px #5cfaff,
+    0px 0px 20px #5cfaff,
+    0px 0px 30px #5cfaff,
+    0px 0px 60px #5cfaff;
+    width: 370px;
+    height: 370px;
+}
+
+.icon-button {
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.icon {
+  padding-left: 20px;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 10px #5cfaff,
+    0px 0px 20px #5cfaff,
+    0px 0px 30px #5cfaff,
+    0px 0px 60px #5cfaff;
+  color: aqua;
+  background-color: #181717;
+  border: 1px solid rgb(248, 252, 252);
+  height: 35px;
+  width: 120px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.btn {
+  box-shadow: 0px 0px 10px #5cfaff,
+    0px 0px 20px #5cfaff,
+    0px 0px 30px #5cfaff,
+    0px 0px 60px #5cfaff;
+  color: rgb(18, 19, 19);
+  background-color: #31ddfc;
+  border: 1px solid rgb(245, 242, 242);
+  height: 35px;
+  width: 120px;
+    margin-left: 40px;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+.but{
+  color: rgb(245, 242, 242);
+  text-decoration: none;
+  background-color:#31ddfc;
+  
+}
+.but:hover{
+  color: rgb(245, 242, 242);
+  text-decoration: none;
+}
